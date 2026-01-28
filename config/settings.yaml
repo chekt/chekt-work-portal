@@ -23,26 +23,26 @@ blockHighlights:
     danger: "bg-rose-700/45 text-rose-200 dark:bg-rose-950/70 dark:text-rose-400"
 
 layout:
-  Delaer Portal:
+  Dealer Portal:
     tab: First
     style: row
-    columns: 3
-    levels:
-      good: "bg-emerald-500/40 text-emerald-950 dark:bg-emerald-900/60 dark:text-emerald-400"
-      warn: "bg-amber-300/30 text-amber-900 dark:bg-amber-900/30 dark:text-amber-200"
-      danger: "bg-rose-700/45 text-rose-200 dark:bg-rose-950/70 dark:text-rose-400"
-
+    columns: 4
   Monitoring Portal:
     tab: First
     style: row
-    columns: 3
+    columns: 4
   End User Web:
     tab: Second
     style: row
-    columns: 3
+    columns: 4
+  Console:
+    tab: Second
+    style: row
+    columns: 4
+
   Tools:
     style: row
-    columns: 2
+    columns: 4
 
   Grafana:
     iconsOnly: true
@@ -51,7 +51,7 @@ headerStyle: clean
 quicklaunch:
   searchDescriptions: false
   hideInternetSearch: true
-  showSearchSuggestions: true
+  showSearchSuggestions: false
   hideVisitURL: true
   provider: ""
 

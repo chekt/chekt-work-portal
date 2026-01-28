@@ -2,11 +2,13 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Delaer Portal:
+- Dealer Portal:
     - Dev:
         href: https://dealer.chektdev.com/
     - QE:
         href: https://dealer.chektqe.com/
+    - S1:
+        href: https://dealer-s1.chekt.com/
     - Prod:
         href: https://dealer.chekt.com/
         siteMonitor: https://dealer.chekt.com/
@@ -16,6 +18,8 @@
         href: https://monitoring.chektdev.com/
     - QE:
         href: https://monitoring.chektqe.com/
+    - S1:
+        href: https://monitoring-s1.chekt.com/
     - Prod:
         href: https://monitoring.chekt.com/
 
@@ -24,13 +28,26 @@
         href: https://app.chektdev.com/
     - QE:
         href: https://app.chektqe.com/
+    - S1:
+        href: https://app-s1.chekt.com/
     - Prod:
         href: https://app.chekt.com/
+
+- Console:
+    - Dev:
+        href: https://console.chektdev.com/
+    - QE:
+        href: https://console.chektqe.com/
+    - S1:
+        href: https://console-s1.chekt.com/
+    - Prod:
+        href: https://console.chekt.com/
 
 - Tools:
     - GitHub:
         icon: /icons/github.svg
         href: https://github.com/chekt
+        highlight: good
     - Jira:
         icon: /icons/jira.svg
         href: https://alarmcom.atlassian.net/jira/software/c/projects/CHEKT/boards/232?quickFilter=529
@@ -43,3 +60,12 @@
     - Status:
         icon: /icons/status.png
         href: https://status.chekt.com
+    - Auth0:
+        icon: /icons/auth0.svg
+        href: https://manage.auth0.com/dashboard
+    - Twilio:
+        icon: /icons/twilio.png
+        href: https://console.twilio.com/
+    - Zoho (링크 잘 몰라요):
+        icon: /icons/zoho.png
+        href: https://www.zoho.com/
