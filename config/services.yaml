@@ -154,7 +154,7 @@
 - ADC:
     - Okta:
         icon: /icons/okta.svg
-        href: https://alarm.okta.com/app
+        href: https://alarm.okta.com
         description: 인증 서비스
     - Navan:
         icon: /icons/navan.png
