@@ -102,11 +102,11 @@
         description: 링크를 몰라요
     - Calipsa:
         icon: /icons/calipsa.png
-        href: https://calipsa.com
+        href: https://calipsa.ai
         description: 링크를 몰라요
     - Actuate:
         icon: /icons/actuate.png
-        href: https://actuate.com
+        href: https://actuate.ai
         description: 링크를 몰라요
 - Tools(By Env):
     - Kibana:
