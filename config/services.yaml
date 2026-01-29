@@ -149,7 +149,6 @@
         href: https://api.slack.com/apps/A09DUJP9RFA
         description: Ask Jeff to be a collaborator
 
-
 # ADC
 - ADC:
     - Okta:
@@ -163,7 +162,7 @@
     - Workday:
         icon: /icons/workday.png
         href: https://alarm.okta.com/home/workday/0oa1al5utnkIzB3ex0h8/30
-        description: 정확히 뭘까 이건
+        description: 법정교육
     - Deel:
         icon: /icons/deel.png
         href: https://app.deel.com/
