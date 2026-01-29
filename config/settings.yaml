@@ -2,8 +2,8 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/settings/
 
-title: CHeKT Homepage
-description: A description of my awesome homepage
+title: CHeKT Portal
+description: CHeKT Portal
 startUrl: /
 background:
   image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
@@ -63,8 +63,9 @@ layout:
 
   ADC:
     tab: ADC
+    header: false
     style: row
-    columns: 4
+    columns: 3
 
 headerStyle: clean
 quicklaunch:

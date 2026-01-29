@@ -110,21 +110,38 @@
 
 - ADC:
     - Okta:
-
+        icon: /icons/okta.svg
+        href: https://alarm.okta.com/app
+        description: 인증 서비스
     - Navan:
+        icon: /icons/navan.png
+        href: https://alarm.okta.com/home/tripactions/0oa1o7y4xayWsHR5h0h8/aln1g73qivtpePS791d8
         description: 항공권 예약
     - Workday:
+        icon: /icons/workday.png
+        href: https://alarm.okta.com/home/workday/0oa1al5utnkIzB3ex0h8/30
         description: 정확히 뭘까 이건
     - Deel:
+        icon: /icons/deel.png
+        href: https://app.deel.com/
         description: 급여, 휴가 관리
     - WIZ:
         icon: /icons/wiz.svg
         href: https://app.wiz.io
         description: 클라우드 보안
     - Spam Quarantine:
+        icon: /icons/spam.png
         href: https://dh4926-euq1.iphmx.com/
         description: 스팸 메일함
     - ServiceNow:
         icon: /icons/servicenow.png
         href: https://alarmprod.service-now.com/adc_ec
         description: 문의사항
+    - Expensify:
+        icon: /icons/expensify.png
+        href: https://www.expensify.com
+        description: 경비 청구
+    - ChatADC:
+        icon: /icons/chatadc.png
+        href: https://chatadc.com/
+        description: ChatGPT
