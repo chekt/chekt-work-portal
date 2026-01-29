@@ -39,6 +39,10 @@ layout:
     tab: CHeKT
     style: row
     columns: 4
+  Account:
+    tab: CHeKT
+    style: row
+    columns: 4
 
   Tools:
     tab: CHeKT
@@ -60,6 +64,11 @@ layout:
     GitOps:
       style: row
       columns: 3
+
+  Misc:
+    tab: CHeKT
+    style: row
+    columns: 3
 
   ADC:
     tab: ADC

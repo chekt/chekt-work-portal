@@ -11,7 +11,7 @@
         href: https://dealer-s1.chekt.com/
     - Prod:
         href: https://dealer.chekt.com/
-        siteMonitor: https://dealer.chekt.com/
+        # ping: https://dealer.chekt.com/
 
 - Monitoring Portal:
     - Dev:
@@ -43,11 +43,29 @@
     - Prod:
         href: https://console.chekt.com/
 
+- Account:
+    - Dev:
+        href: https://account.chektdev.com/
+    - QE:
+        href: https://account.chektqe.com/
+    - S1:
+        href: https://account-s1.chekt.com/
+    - Prod:
+        href: https://account.chekt.com/
+
 - Tools:
+    - AWS:
+        icon: /icons/aws.svg
+        href: https://console.aws.amazon.com
+    - GCP:
+        icon: /icons/gcp.svg
+        href: https://console.cloud.google.com
+    - Digital Ocean:
+        icon: /icons/digitalocean.svg
+        href: https://cloud.digitalocean.com
     - GitHub:
         icon: /icons/github.svg
         href: https://github.com/chekt
-        highlight: good
     - Jira:
         icon: /icons/jira.svg
         href: https://alarmcom.atlassian.net/jira/software/c/projects/CHEKT/boards/232?quickFilter=529
@@ -72,8 +90,21 @@
     - Firebase:
         icon: /icons/firebase.svg
         href: https://console.firebase.google.com
-
-
+    - Figma:
+        icon: /icons/figma.svg
+        href: https://www.figma.com/files/1040663912643495126/team/933301007274602444/CHeKT?fuid=1539269208954171621
+    - Sentry:
+        icon: /icons/sentry.png
+        href: https://chekt.sentry.io/issues
+    - Notion:
+        icon: /icons/notion.svg
+        href: https://www.notion.so/chekt
+    - Calipsa (링크를 몰라요):
+        icon: /icons/calipsa.png
+        href: https://calipsa.com
+    - Actuate (링크를 몰라요):
+        icon: /icons/actuate.png
+        href: https://actuate.com
 - Tools(By Env):
     - Kibana:
         - Dev:
@@ -105,9 +136,18 @@
         - Prod:
             icon: /icons/argocd.svg
             href: https://gitops.chekt.com
+- Misc:
+    - World Time Buddy:
+        icon: /icons/world-time-buddy.png
+        href: https://www.worldtimebuddy.com/
+        description: 시차 계산기
+    - CHeKT Bot:
+        icon: /icons/slack.svg
+        href: https://api.slack.com/apps/A09DUJP9RFA
+        description: Ask Jeff to be a collaborator
+
 
 # ADC
-
 - ADC:
     - Okta:
         icon: /icons/okta.svg
@@ -145,3 +185,7 @@
         icon: /icons/chatadc.png
         href: https://chatadc.com/
         description: ChatGPT
+    # - Secret Server:
+    #     icon: /icons/secret-server.png
+    #     href: https://secret.chekt.com
+    #     description: 비밀번호 관리
