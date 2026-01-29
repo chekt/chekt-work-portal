@@ -84,9 +84,6 @@
     - Twilio:
         icon: /icons/twilio.png
         href: https://console.twilio.com/
-    - Zoho (링크 잘 몰라요):
-        icon: /icons/zoho.png
-        href: https://www.zoho.com/
     - Firebase:
         icon: /icons/firebase.svg
         href: https://console.firebase.google.com
@@ -99,12 +96,18 @@
     - Notion:
         icon: /icons/notion.svg
         href: https://www.notion.so/chekt
-    - Calipsa (링크를 몰라요):
+    - Zoho:
+        icon: /icons/zoho.png
+        href: https://www.zoho.com/
+        description: 링크를 몰라요
+    - Calipsa:
         icon: /icons/calipsa.png
         href: https://calipsa.com
-    - Actuate (링크를 몰라요):
+        description: 링크를 몰라요
+    - Actuate:
         icon: /icons/actuate.png
         href: https://actuate.com
+        description: 링크를 몰라요
 - Tools(By Env):
     - Kibana:
         - Dev:
