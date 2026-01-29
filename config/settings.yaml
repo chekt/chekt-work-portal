@@ -24,23 +24,29 @@ blockHighlights:
 
 layout:
   Dealer Portal:
+    tab: CHeKT
     style: row
     columns: 4
   Monitoring Portal:
+    tab: CHeKT
     style: row
     columns: 4
   End User Web:
+    tab: CHeKT
     style: row
     columns: 4
   Console:
+    tab: CHeKT
     style: row
     columns: 4
 
   Tools:
+    tab: CHeKT
     style: row
     columns: 4
 
   Tools(By Env):
+    tab: CHeKT
     style: row
     columns: 2
 
@@ -54,6 +60,11 @@ layout:
     GitOps:
       style: row
       columns: 3
+
+  ADC:
+    tab: ADC
+    style: row
+    columns: 4
 
 headerStyle: clean
 quicklaunch:

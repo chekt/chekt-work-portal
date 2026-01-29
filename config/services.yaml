@@ -105,3 +105,26 @@
         - Prod:
             icon: /icons/argocd.svg
             href: https://gitops.chekt.com
+
+# ADC
+
+- ADC:
+    - Okta:
+
+    - Navan:
+        description: 항공권 예약
+    - Workday:
+        description: 정확히 뭘까 이건
+    - Deel:
+        description: 급여, 휴가 관리
+    - WIZ:
+        icon: /icons/wiz.svg
+        href: https://app.wiz.io
+        description: 클라우드 보안
+    - Spam Quarantine:
+        href: https://dh4926-euq1.iphmx.com/
+        description: 스팸 메일함
+    - ServiceNow:
+        icon: /icons/servicenow.png
+        href: https://alarmprod.service-now.com/adc_ec
+        description: 문의사항
