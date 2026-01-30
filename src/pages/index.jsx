@@ -7,6 +7,7 @@ import ServicesGroup from "components/services/group";
 import Tab, { slugifyAndEncode } from "components/tab";
 import Revalidate from "components/toggles/revalidate";
 import Widget from "components/widgets/widget";
+import { getServerSession } from "next-auth/next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
@@ -26,6 +27,7 @@ import { getSettings } from "utils/config/config";
 import useWindowFocus from "utils/hooks/window-focus";
 import createLogger from "utils/logger";
 import themes from "utils/styles/themes";
+import { authOptions } from "./api/auth/[...nextauth]";
 
 const ThemeToggle = dynamic(() => import("components/toggles/theme"), {
   ssr: false,
@@ -52,7 +54,20 @@ const normalizeLanguage = (language) => {
   return alias || language;
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
+  // 세션 체크
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  // 로그인되지 않은 경우 Keycloak 로그인으로 리다이렉트
+  if (!session) {
+    return {
+      redirect: {
+        destination: `/api/auth/signin/keycloak?callbackUrl=${encodeURIComponent(context.resolvedUrl)}`,
+        permanent: false,
+      },
+    };
+  }
+
   let logger;
   try {
     logger = createLogger("index");
