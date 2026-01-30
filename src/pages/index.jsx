@@ -22,12 +22,13 @@ import { SettingsContext } from "utils/contexts/settings";
 import { TabContext } from "utils/contexts/tab";
 import { ThemeContext } from "utils/contexts/theme";
 
+import { authOptions } from "./api/auth/[...nextauth]";
+
 import { bookmarksResponse, servicesResponse, widgetsResponse } from "utils/config/api-response";
 import { getSettings } from "utils/config/config";
 import useWindowFocus from "utils/hooks/window-focus";
 import createLogger from "utils/logger";
 import themes from "utils/styles/themes";
-import { authOptions } from "./api/auth/[...nextauth]";
 
 const ThemeToggle = dynamic(() => import("components/toggles/theme"), {
   ssr: false,
