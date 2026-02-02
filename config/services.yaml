@@ -68,7 +68,7 @@
         href: https://github.com/chekt
     - Jira:
         icon: /icons/jira.svg
-        href: https://alarmcom.atlassian.net/jira/software/c/projects/CHEKT/boards/232?quickFilter=529
+        href: https://alarmcom.atlassian.net/jira/software/c/projects/CHEKT/boards/199
     - Codefresh:
         icon: /icons/codefresh.png
         href: https://g.codefresh.io
@@ -89,7 +89,7 @@
         href: https://console.firebase.google.com
     - Figma:
         icon: /icons/figma.svg
-        href: https://www.figma.com/files/1040663912643495126/team/933301007274602444/CHeKT?fuid=1539269208954171621
+        href: https://www.figma.com/files/1040663912643495126/team/933301007274602444/CHeKT
     - Sentry:
         icon: /icons/sentry.png
         href: https://chekt.sentry.io/issues
