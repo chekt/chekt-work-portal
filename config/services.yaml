@@ -96,6 +96,9 @@
     - Notion:
         icon: /icons/notion.svg
         href: https://www.notion.so/chekt
+    - Wasabi:
+        icon: /icons/wasabi.avif
+        href: https://console.wasabisys.com/dashboard
     - Zoho:
         icon: /icons/zoho.png
         href: https://www.zoho.com/
