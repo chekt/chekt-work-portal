@@ -54,6 +54,9 @@
         href: https://account.chekt.com/
 
 - Tools:
+    - API Doc:
+        href: https://doc.chektdev.com
+        icon: /icons/chekt.png
     - AWS:
         icon: /icons/aws.svg
         href: https://console.aws.amazon.com
