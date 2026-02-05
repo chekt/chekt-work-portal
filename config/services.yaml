@@ -2,59 +2,66 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Dealer Portal:
-    - Dev:
-        href: https://dealer.chektdev.com/
-    - QE:
-        href: https://dealer.chektqe.com/
-    - S1:
-        href: https://dealer-s1.chekt.com/
-    - Prod:
-        href: https://dealer.chekt.com/
-        # ping: https://dealer.chekt.com/
+- CHeKT:
+    - Dealer Portal:
+        - Dev:
+            href: https://dealer.chektdev.com/
+        - QE:
+            href: https://dealer.chektqe.com/
+        - S1:
+            href: https://dealer-s1.chekt.com/
+        - Prod:
+            href: https://dealer.chekt.com/
+            # ping: https://dealer.chekt.com/
 
-- Monitoring Portal:
-    - Dev:
-        href: https://monitoring.chektdev.com/
-    - QE:
-        href: https://monitoring.chektqe.com/
-    - S1:
-        href: https://monitoring-s1.chekt.com/
-    - Prod:
-        href: https://monitoring.chekt.com/
+    - Monitoring Portal:
+        - Dev:
+            href: https://monitoring.chektdev.com/
+        - QE:
+            href: https://monitoring.chektqe.com/
+        - S1:
+            href: https://monitoring-s1.chekt.com/
+        - Prod:
+            href: https://monitoring.chekt.com/
 
-- End User Web:
-    - Dev:
-        href: https://app.chektdev.com/
-    - QE:
-        href: https://app.chektqe.com/
-    - S1:
-        href: https://app-s1.chekt.com/
-    - Prod:
-        href: https://app.chekt.com/
+    - End User Web:
+        - Dev:
+            href: https://app.chektdev.com/
+        - QE:
+            href: https://app.chektqe.com/
+        - S1:
+            href: https://app-s1.chekt.com/
+        - Prod:
+            href: https://app.chekt.com/
 
-- Console:
-    - Dev:
-        href: https://console.chektdev.com/
-    - QE:
-        href: https://console.chektqe.com/
-    - S1:
-        href: https://console-s1.chekt.com/
-    - Prod:
-        href: https://console.chekt.com/
+    - Console:
+        - Dev:
+            href: https://console.chektdev.com/
+        - QE:
+            href: https://console.chektqe.com/
+        - S1:
+            href: https://console-s1.chekt.com/
+        - Prod:
+            href: https://console.chekt.com/
 
-- Account:
-    - Dev:
-        href: https://account.chektdev.com/
-    - QE:
-        href: https://account.chektqe.com/
-    - S1:
-        href: https://account-s1.chekt.com/
-    - Prod:
-        href: https://account.chekt.com/
-
+    - Account:
+        - Dev:
+            href: https://account.chektdev.com/
+        - QE:
+            href: https://account.chektqe.com/
+        - S1:
+            href: https://account-s1.chekt.com/
+        - Prod:
+            href: https://account.chekt.com/
+    - Ohters:
+        - Support:
+            href: https://support.chekt.com
+        - Homepage (Dev):
+            href: https://chektdev.com
+        - Homepage (Prod):
+            href: https://chekt.com
 - Docs:
-    - General:
+    - General API:
         href: https://doc.chektdev.com
     - Third Party (Dev):
         href: https://public-apidoc-chektdev.web.app/
