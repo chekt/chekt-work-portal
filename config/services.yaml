@@ -53,10 +53,23 @@
     - Prod:
         href: https://account.chekt.com/
 
-- Tools:
-    - API Doc:
+- Docs:
+    - General:
         href: https://doc.chektdev.com
-        icon: /icons/chekt.png
+    - Third Party (Dev):
+        href: https://public-apidoc-chektdev.web.app/
+    - Third Party (Prod):
+        href: https://public-apidoc-chekt.web.app/
+    - Partner (Dev):
+        href: https://partner-apidoc-chektdev.web.app/
+    - Partner (Prod):
+        href: https://partner-apidoc-chekt.web.app/
+    - Partner Event:
+        href: https://partner-event-apidoc-chektdev.web.app/
+    - Partner OE Event:
+        href: https://partner-oe-event-apidoc-chektdev.web.app/
+
+- Tools:
     - AWS:
         icon: /icons/aws.svg
         href: https://console.aws.amazon.com
@@ -67,7 +80,7 @@
         icon: /icons/digitalocean.svg
         href: https://cloud.digitalocean.com
     - GitHub:
-        icon: /icons/github.svg
+        icon: /icons/github.png
         href: https://github.com/chekt
     - Jira:
         icon: /icons/jira.svg
@@ -105,15 +118,12 @@
     - Zoho:
         icon: /icons/zoho.png
         href: https://www.zoho.com/
-        description: 링크를 몰라요
     - Calipsa:
         icon: /icons/calipsa.png
         href: https://calipsa.io
-        description: 링크를 몰라요
     - Actuate:
         icon: /icons/actuate.png
         href: https://actuate.ai
-        description: 링크를 몰라요
 - Tools(By Env):
     - Kibana:
         - Dev:
@@ -145,16 +155,37 @@
         - Prod:
             icon: /icons/argocd.svg
             href: https://gitops.chekt.com
+- Integrations:
+    - Slack:
+        - CHeKT Bot (Internal):
+            icon: /icons/slack.svg
+            href: https://api.slack.com/apps/A09DUJP9RFA
+            description: "@jeff"
+        - Log prettier:
+            icon: /icons/slack.svg
+            href: https://api.slack.com/apps/A08ACRVDJ3U
+            description: "@jeff"
+        - Collecting AI Detection:
+            icon: /icons/slack.svg
+            href: https://api.slack.com/apps/A0A4BH8A8HW
+            description: "@jeff"
+    - Notion: 
+        - CHeKT Bot (internal):
+            icon: /icons/notion.svg
+            description: "@trevor"
+        - CHeKT Bot - Developers:
+            icon: /icons/notion.svg
+            description: "@trevor"
+    - GitHub:
+        - CHeKT Release Bot:
+            icon: /icons/github.png
+            description: "@trevor"
+
 - Misc:
     - World Time Buddy:
         icon: /icons/world-time-buddy.png
         href: https://www.worldtimebuddy.com/
         description: 시차 계산기
-    - CHeKT Bot:
-        icon: /icons/slack.svg
-        href: https://api.slack.com/apps/A09DUJP9RFA
-        description: Ask Jeff to be a collaborator
-
 # ADC
 - ADC:
     - Okta:

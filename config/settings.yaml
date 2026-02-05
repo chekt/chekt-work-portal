@@ -44,6 +44,11 @@ layout:
     style: row
     columns: 4
 
+  Docs:
+    tab: CHeKT
+    style: row
+    columns: 4
+
   Tools:
     tab: CHeKT
     style: row
@@ -64,6 +69,12 @@ layout:
     GitOps:
       style: row
       columns: 3
+  
+  Integrations:
+    tab: CHeKT
+    header: false
+    style: row
+    columns: 3
 
   Misc:
     tab: CHeKT
