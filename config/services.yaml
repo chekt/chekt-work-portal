@@ -53,13 +53,16 @@
             href: https://account-s1.chekt.com/
         - Prod:
             href: https://account.chekt.com/
-    - Ohters:
-        - Support:
-            href: https://support.chekt.com
-        - Homepage (Dev):
-            href: https://chektdev.com
-        - Homepage (Prod):
-            href: https://chekt.com
+- Ohters:
+    - Support:
+        href: https://support.chekt.com
+    - Homepage (Dev):
+        href: https://chektdev.com
+    - Homepage (Prod):
+        href: https://chekt.com
+    - Factory:
+        href: https://fty.chekt.com
+
 - Docs:
     - General API:
         href: https://doc.chektdev.com
@@ -131,6 +134,9 @@
     - Actuate:
         icon: /icons/actuate.png
         href: https://actuate.ai
+    - Vault:
+        # icon: /icons/actuate.png
+        href: https://vault.chekt.work
 - Tools(By Env):
     - Kibana:
         - Dev:

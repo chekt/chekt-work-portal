@@ -29,6 +29,11 @@ layout:
     style: row
     columns: 5
 
+  Ohters:
+    tab: CHeKT
+    style: row
+    columns: 5
+
   Docs:
     tab: CHeKT
     style: row
