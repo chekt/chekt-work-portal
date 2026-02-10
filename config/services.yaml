@@ -134,9 +134,6 @@
     - Actuate:
         icon: /icons/actuate.png
         href: https://actuate.ai
-    - Vault:
-        # icon: /icons/actuate.png
-        href: https://vault.chekt.work
 - Tools(By Env):
     - Kibana:
         - Dev:
@@ -168,6 +165,12 @@
         - Prod:
             icon: /icons/argocd.svg
             href: https://gitops.chekt.com
+    - Utils:
+        - Object Tracker:
+            href: https://lab.chekt.com/
+        - Vault:
+            href: https://vault.chekt.work
+
 - Integrations:
     - Slack:
         - CHeKT Bot (Internal):
