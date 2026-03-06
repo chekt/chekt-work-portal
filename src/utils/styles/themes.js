@@ -137,6 +137,12 @@ const themes = {
     iconEnd: "#be123c",
     dark: "#9f1239",
   },
+  "custom-blue": {
+    light: "#f5fafd",
+    iconStart: "#42A5F5",
+    iconEnd: "#1E88E5",
+    dark: "#1565C0",
+  },
 };
 
 export default themes;

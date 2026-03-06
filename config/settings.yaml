@@ -5,15 +5,16 @@
 title: CHeKT Portal
 description: CHeKT Portal
 startUrl: /
-background:
-  image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
-  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
-  saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
-  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
-  opacity: 50 # 0-100
+# Modern clean background - no image needed
+# background:
+#   image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+#   blur: sm
+#   saturate: 50
+#   brightness: 50
+#   opacity: 50
 favicon: /favicon.ico
-theme: dark
-color: blue
+theme: light # Clean minimal design with light theme
+color: blue # Blue accent color (#1E88E5)
 disableCollapse: true
 
 blockHighlights:

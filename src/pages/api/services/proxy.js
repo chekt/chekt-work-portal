@@ -2,7 +2,6 @@ import getServiceWidget from "utils/config/service-helpers";
 import createLogger from "utils/logger";
 import { formatApiCall } from "utils/proxy/api-helpers";
 import genericProxyHandler from "utils/proxy/handlers/generic";
-import calendarProxyHandler from "widgets/calendar/proxy";
 import widgets from "widgets/widgets";
 
 const logger = createLogger("servicesProxy");
@@ -27,8 +26,8 @@ export default async function handler(req, res) {
     const serviceProxyHandler = widget.proxyHandler || genericProxyHandler;
 
     if (serviceProxyHandler instanceof Function) {
-      // quick return for no endpoint services, calendar is an exception
-      if (!req.query.endpoint || serviceProxyHandler === calendarProxyHandler) {
+      // quick return for no endpoint services
+      if (!req.query.endpoint) {
         return serviceProxyHandler(req, res);
       }
 
