@@ -121,13 +121,13 @@
             href: https://kibana.chekt.com
     - Grafana:
         - Dev:
-            icon: grafana.png
+            icon: /icons/grafana.png
             href: https://grafana.chektdev.com/
         - QE:
-            icon: grafana.png
+            icon: /icons/grafana.png
             href: https://grafana.chektqe.com/
         - Prod:
-            icon: grafana.png
+            icon: /icons/grafana.png
             href: https://grafana.chekt.com/
     - GitOps:
         - Dev:
