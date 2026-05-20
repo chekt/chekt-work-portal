@@ -52,7 +52,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.1px;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 #page_wrapper {
@@ -62,32 +61,11 @@ body {
 }
 
 .light {
-  --bg-color: var(--color-50);
-  --scrollbar-thumb: rgb(var(--color-300));
-  --scrollbar-track: rgb(var(--color-200));
+  --bg-color: 255 255 255;
 }
 
 .dark {
-  --bg-color: var(--color-800);
-  --scrollbar-thumb: rgb(var(--color-600));
-  --scrollbar-track: rgb(var(--color-700));
-}
-
-dialog ::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-  border-radius: 0.25em;
-}
-
-::-webkit-details-marker {
-  display: none;
+  --bg-color: 26 26 26;
 }
 
 .chart + .chart {
