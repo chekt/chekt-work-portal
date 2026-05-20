@@ -5,7 +5,7 @@ import { ColorContext } from "utils/contexts/color";
 import { SettingsContext } from "utils/contexts/settings";
 import { ThemeContext } from "utils/contexts/theme";
 
-import { bookmarksResponse, servicesResponse } from "utils/config/api-response";
+import { servicesResponse } from "utils/config/api-response";
 import { getSettings } from "utils/config/config";
 import createLogger from "utils/logger";
 import themes from "utils/styles/themes";
@@ -17,13 +17,11 @@ export async function getStaticProps() {
     const { providers, ...settings } = getSettings();
 
     const services = await servicesResponse();
-    const bookmarks = await bookmarksResponse();
 
     return {
       props: {
         initialSettings: settings,
         initialServices: services,
-        initialBookmarks: bookmarks,
       },
     };
   } catch (e) {
@@ -32,7 +30,6 @@ export async function getStaticProps() {
       props: {
         initialSettings: {},
         initialServices: [],
-        initialBookmarks: [],
       },
     };
   }
