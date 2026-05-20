@@ -3,10 +3,11 @@ import Head from "next/head";
 import "styles/globals.css";
 import "styles/manrope.css";
 import "styles/theme.css";
+import "styles/portal.css";
 import { SWRConfig } from "swr";
 import { ColorProvider } from "utils/contexts/color";
 import { SettingsProvider } from "utils/contexts/settings";
-import { TabProvider } from "utils/contexts/tab";
+
 import { ThemeProvider } from "utils/contexts/theme";
 
 // eslint-disable-next-line no-unused-vars
@@ -81,9 +82,7 @@ function MyApp({ Component, pageProps }) {
       <ColorProvider>
         <ThemeProvider>
           <SettingsProvider>
-            <TabProvider>
               <Component {...pageProps} />
-            </TabProvider>
           </SettingsProvider>
         </ThemeProvider>
       </ColorProvider>

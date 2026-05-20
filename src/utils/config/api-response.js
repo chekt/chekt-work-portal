@@ -1,18 +1,11 @@
 /* eslint-disable no-console */
-import { promises as fs } from "fs";
-import path from "path";
-
-import yaml from "js-yaml";
-
-import checkAndCopyConfig, { CONF_DIR, getSettings, substituteEnvironmentVars } from "utils/config/config";
+import { getSettings } from "utils/config/config";
 import {
   cleanServiceGroups,
   findGroupByName,
   servicesFromConfig,
   servicesFromDocker,
-  servicesFromKubernetes,
 } from "utils/config/service-helpers";
-import { cleanWidgetGroups, widgetsFromConfig } from "utils/config/widget-helpers";
 
 /**
  * Compares services by weight then by name.
@@ -25,19 +18,6 @@ function compareServices(service1, service2) {
   return service1.name.localeCompare(service2.name);
 }
 
-export async function widgetsResponse() {
-  let configuredWidgets;
-
-  try {
-    configuredWidgets = cleanWidgetGroups(await widgetsFromConfig());
-  } catch (e) {
-    console.error("Failed to load widgets, please check widgets.yaml for errors or remove example entries.");
-    if (e) console.error(e);
-    configuredWidgets = [];
-  }
-
-  return configuredWidgets;
-}
 
 function convertLayoutGroupToGroup(name, layoutGroup) {
   const group = { name, services: [], groups: [] };
@@ -113,7 +93,6 @@ function mergeLayoutGroupsIntoConfigured(configuredGroups, layoutGroups) {
 
 export async function servicesResponse() {
   let discoveredDockerServices;
-  let discoveredKubernetesServices;
   let configuredServices;
   let initialSettings;
 
@@ -126,14 +105,6 @@ export async function servicesResponse() {
     console.error("Failed to discover services, please check docker.yaml for errors or remove example entries.");
     if (e) console.error(e.toString());
     discoveredDockerServices = [];
-  }
-
-  try {
-    discoveredKubernetesServices = cleanServiceGroups(await servicesFromKubernetes());
-  } catch (e) {
-    console.error("Failed to discover services, please check kubernetes.yaml for errors or remove example entries.");
-    if (e) console.error(e.toString());
-    discoveredKubernetesServices = [];
   }
 
   try {
@@ -156,7 +127,6 @@ export async function servicesResponse() {
     ...new Set(
       [
         discoveredDockerServices.map((group) => group.name),
-        discoveredKubernetesServices.map((group) => group.name),
         configuredServices.map((group) => group.name),
       ].flat(),
     ),
@@ -177,14 +147,11 @@ export async function servicesResponse() {
     const discoveredDockerGroup = findGroupByName(discoveredDockerServices, groupName) || {
       services: [],
     };
-    const discoveredKubernetesGroup = findGroupByName(discoveredKubernetesServices, groupName) || {
-      services: [],
-    };
     const configuredGroup = findGroupByName(configuredServices, groupName) || { services: [], groups: [] };
 
     const mergedGroup = {
       name: groupName,
-      services: [...discoveredDockerGroup.services, ...discoveredKubernetesGroup.services, ...configuredGroup.services]
+      services: [...discoveredDockerGroup.services, ...configuredGroup.services]
         .filter((service) => service)
         .sort(compareServices),
       groups: [...configuredGroup.groups],

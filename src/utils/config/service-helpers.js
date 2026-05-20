@@ -6,9 +6,7 @@ import yaml from "js-yaml";
 
 import checkAndCopyConfig, { CONF_DIR, getSettings, substituteEnvironmentVars } from "utils/config/config";
 import getDockerArguments from "utils/config/docker";
-import { getKubeConfig } from "utils/config/kubernetes";
 import * as shvl from "utils/config/shvl";
-import kubernetes from "utils/kubernetes/export";
 import createLogger from "utils/logger";
 
 const logger = createLogger("service-helpers");
@@ -169,61 +167,7 @@ export async function servicesFromDocker() {
 }
 
 export async function servicesFromKubernetes() {
-  const { instanceName } = getSettings();
-
-  checkAndCopyConfig("kubernetes.yaml");
-
-  try {
-    const kc = getKubeConfig();
-    if (!kc) {
-      return [];
-    }
-
-    // resource lists
-    const [ingressList, traefikIngressList, httpRouteList] = await Promise.all([
-      kubernetes.listIngress(),
-      kubernetes.listTraefikIngress(),
-      kubernetes.listHttpRoute(),
-    ]);
-
-    const resources = [...ingressList, ...traefikIngressList, ...httpRouteList];
-
-    if (!resources) {
-      return [];
-    }
-    const services = await Promise.all(
-      resources
-        .filter((resource) => kubernetes.isDiscoverable(resource, instanceName))
-        .map(async (resource) => kubernetes.constructedServiceFromResource(resource)),
-    );
-
-    // map service groups
-    const mappedServiceGroups = services.reduce((groups, serverService) => {
-      let serverGroup = groups.find((group) => group.name === serverService.group);
-
-      if (!serverGroup) {
-        serverGroup = {
-          name: serverService.group,
-          services: [],
-        };
-        groups.push(serverGroup);
-      }
-
-      const { name: serviceName, group: _, ...pushedService } = serverService;
-
-      serverGroup.services.push({
-        name: serviceName,
-        ...pushedService,
-      });
-
-      return groups;
-    }, []);
-
-    return mappedServiceGroups;
-  } catch (e) {
-    if (e) logger.error(e);
-    throw e;
-  }
+  return [];
 }
 
 export function cleanServiceGroups(groups) {
@@ -707,13 +651,6 @@ export async function getServiceItem(group, service) {
   if (dockerServiceGroup) {
     const dockerServiceEntry = dockerServiceGroup.services.find((s) => s.name === service);
     if (dockerServiceEntry) return dockerServiceEntry;
-  }
-
-  const kubernetesServices = await servicesFromKubernetes();
-  const kubernetesServiceGroup = findGroupByName(kubernetesServices, group);
-  if (kubernetesServiceGroup) {
-    const kubernetesServiceEntry = kubernetesServiceGroup.services.find((s) => s.name === service);
-    if (kubernetesServiceEntry) return kubernetesServiceEntry;
   }
 
   return false;
